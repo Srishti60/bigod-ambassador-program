@@ -1,0 +1,92 @@
+.line-wrapper {
+  width: 300px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+}
+.svg-container1 svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@keyframes electricLineBlue {
+  0% {
+    stroke-dashoffset: 1000;
+    stroke: #2559FF;
+    }
+   100% {
+    stroke-dashoffset: 0;
+    stroke: #2559FF;
+   }
+}
+.svg-container1 path,
+.svg-container1 line,
+.svg-container1 polyline,
+.svg-container1 rect {
+  stroke: #2559FF;
+  stroke-width: 1.5;
+  fill: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: electricLineBlue 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px #2559FF);
+}
+
+.hover-glow-card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+/* Corner glow container */
+.corner-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+/* Top-left corner */
+.corner-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+ border-image-source: linear-gradient(137.5deg, #2559FF 0.49%, rgba(21, 191, 253, 0) 47.32%);
+  border-image-slice: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* Bottom-right corner */
+.corner-gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-bottom: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-image: linear-gradient(315deg, #2559FF 0.49%, rgba(21, 191, 253, 0) 47.32%);
+  border-image-slice: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* Show corners on hover */
+.hover-glow-card:hover .corner-gradient::before,
+.hover-glow-card:hover .corner-gradient::after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .line-wrapper {
+    width: 220px;
+  }
+}
+
+
