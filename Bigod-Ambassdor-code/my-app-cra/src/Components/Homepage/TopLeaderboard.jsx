@@ -47,7 +47,7 @@ function TopLeaderboard() {
 
         {/* MAIN BLUE BOX */}
         <div className="w-full  bg-[#244286] rounded-3xl border-[#D4AE50] border-[6px] 
-          p-6 md:p-10 flex flex-col xs:flex-row lg:flex-row justify-between items-center gap-10">
+          p-6 md:p-10 flex flex-col xs:flex-row lg:flex-row justify-between items-center gap-10"> 
 
           {/* LEFT SIDE LEADER LIST */}
           <div className="flex flex-col gap-6 w-full md:w-auto">
