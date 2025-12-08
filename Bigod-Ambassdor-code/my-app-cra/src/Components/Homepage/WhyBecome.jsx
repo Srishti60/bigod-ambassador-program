@@ -8,6 +8,9 @@ import about2 from "../../images/about2.svg";
 import about3 from "../../images/about3.svg";
 import about4 from "../../images/about4.svg";
 import aboutlogo1 from "../../images/aboutlogo1.svg";
+import aboutlogo2 from "../../images/aboutlogo2.svg";
+import aboutlogo3 from "../../images/aboutlogo3.svg";
+import aboutlogo4 from "../../images/aboutlogo4.svg";
 import token from "../../images/token.png";
 
 function WhyBecome() {
@@ -33,7 +36,7 @@ function WhyBecome() {
     {
       banner: about2,
       title: "Contribute to one of the most trusted RWA ecosystems in Web3",
-      img: aboutlogo1,
+      img: aboutlogo2,
     },
   ];
   
@@ -42,13 +45,13 @@ function WhyBecome() {
       banner: about3,
       title:
         "Earn performance-based rewards, exclusive access, and global visibility.",
-      img: aboutlogo1,
+      img: aboutlogo3,
     },
     {
       banner: about4,
       title:
         "Join a network of like-minded builders, investors, and creators shaping the new digital economy.",
-      img: aboutlogo1,
+      img: aboutlogo4,
     },
   ];
 
@@ -65,7 +68,7 @@ function WhyBecome() {
       </div>
       <BorderRayCircuit />
       <div className="md:max-w-[1120px] sm:max-w-[1000px] max-w-[600px] w-full flex sm:flex-row md:flex-row flex-col justify-center items-center lg:p-0 p-3 mt-12 mb-12">
-        <div className="flex flex-col gap-10 lg:mr-[-140px] md:mr-[-140px] xs:mr-[-80px] ">
+        <div className="flex flex-col gap-10 mr-0 md:mr-[-100px] lg:mr-[-140px] ">
           {leftData.map((item, index) => (
             <div
               className="relative "
@@ -74,25 +77,25 @@ function WhyBecome() {
               data-aos-delay={index * 300}
             >
               <img src={item.banner} alt="" />
-              <div className="absolute inset-0 flex flex-col  gap-4 items-center justify-center lg:px-20 px-4 text-center">
-                <img src={item.img} alt="" className="h-[65px] " />
-                <p className="md:text-xl sm:text-sm text-base text-white font-medium text-center mb-1">
+              <div className="absolute inset-0 flex flex-col  gap-4 items-center justify-center md:px-24 px-4 text-center">
+                <img src={item.img} alt="" className="lg:h-[65px] md:h-[40px] h-[50px]" />
+                <p className="lg:text-xl md:text-base text-base text-white font-medium text-center mb-1">
                   {item.title}
                 </p>
               </div>
             </div>
           ))}
         </div>
-        <div className="md:block sm:block hidden z-30">
+        <div className="md:block  hidden z-30">
           <img src={token} className="w-[500px] max-w-full" />
         </div>
-        <div className="md:hidden sm:hidden block mt-7 mb-7 z-30">
+        <div className="md:hidden block mt-7 mb-7 z-30">
           <img
             src={token}
             className="w-[260px] max-w-full animate-spin-reverse-slow z-20"
           />
         </div>
-        <div className="flex flex-col gap-10 lg:ml-[-140px] md:ml-[-140px] xs:ml-[-80px]  ">
+        <div className="flex flex-col gap-10 ml-0 md:ml-[-100px] lg:ml-[-140px]">
           {rightData.map((item, index) => (
             <div
               className="relative"
@@ -101,9 +104,9 @@ function WhyBecome() {
               data-aos-delay={index * 300}
             >
               <img src={item.banner} alt="" />
-              <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center lg:px-20 px-4 text-center">
-                <img src={item.img} alt="" className="h-[65px]" />
-                <p className="md:text-xl sm:text-sm text-base text-white font-medium text-center mb-1">
+              <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center md:px-24 px-4 text-center">
+                <img src={item.img} alt="" className="lg:h-[65px] md:h-[40px] h-[50px]" />
+                <p className="lg:text-xl md:text-base text-base text-white font-medium text-center mb-1">
                   {item.title}
                 </p>
               </div>

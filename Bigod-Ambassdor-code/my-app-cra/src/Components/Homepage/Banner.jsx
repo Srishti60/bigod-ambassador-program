@@ -1,4 +1,4 @@
-import banner from "../../images/Circle.mp4";
+import banner from "../../images/bannervd.mp4";
 
 function Banner() {
   return (

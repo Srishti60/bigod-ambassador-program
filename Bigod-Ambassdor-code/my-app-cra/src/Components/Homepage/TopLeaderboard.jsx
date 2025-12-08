@@ -47,7 +47,7 @@ function TopLeaderboard() {
 
         {/* MAIN BLUE BOX */}
         <div className="w-full  bg-[#244286] rounded-3xl border-[#D4AE50] border-[6px] 
-          p-6 md:p-10 flex flex-col xs:flex-row lg:flex-row justify-between items-center gap-10"> 
+          p-6 md:p-10 flex flex-col md:flex-row lg:flex-row justify-between items-center gap-10"> 
 
           {/* LEFT SIDE LEADER LIST */}
           <div className="flex flex-col gap-6 w-full md:w-auto">
@@ -57,7 +57,7 @@ function TopLeaderboard() {
                 <img src={item.profile} alt="profile" className="md:h-[40px] h-[28px]" />
 
                 <div className="flex justify-center items-center gap-4 
-                  h-[50px] w-[240px] md:w-[350px] rounded-xl border-2 border-white bg-[#224187]">
+                  h-[50px] w-[240px] md:w-[320px] lg:w-[350px] rounded-xl border-2 border-white bg-[#224187]">
                   <p className="text-white text-sm font-semibold">Leader</p>
                   <img src={star} className="lg:h-[20px] h-[15px]" alt="star" />
                   <p className="text-white text-sm font-semibold">1345</p>
@@ -71,17 +71,17 @@ function TopLeaderboard() {
             <img
               src={gif}
               alt="leaderboard gif"
-              className="h-[220px] md:h-[360px] lg:h-[360px] hidden lg:block md:block  relative top-[70px]"
+              className="h-[220px]  lg:h-[340px] hidden lg:block  relative top-[80px]"
             />
           </div>
 
           {/* RIGHT SIDE BENEFITS */}
-          <div className="flex flex-col gap-6 xs:mt-4 w-full md:w-auto">
+          <div className="flex flex-col gap-6 md:mt-4 w-full md:w-auto">
             {LeaderData2.map((item, index) => (
               <div className="relative w-full md:w-auto flex justify-center" key={index}>
                 <img
                   src={leaderBackground}
-                  className="h-[95px] md:h-[103px] w-auto"
+                  className="h-[100px] md:h-[103px] w-auto "
                   alt=""
                 />
                 <div className="absolute inset-0 flex items-center justify-center px-6">

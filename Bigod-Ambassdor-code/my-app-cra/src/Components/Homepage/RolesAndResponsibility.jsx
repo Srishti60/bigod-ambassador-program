@@ -26,13 +26,6 @@ function RolesAndResponsibility() {
       icon: roles2,
     },
     
-    // {
-    //   title: "Event or Meetup Host ",
-    //   desc1: "Share insights and updates from your local market with the core team.",
-    //   desc2:
-    //     "",
-    //   icon: roles5,
-    // },
   ];
   const rightData=[
    {
@@ -57,7 +50,7 @@ function RolesAndResponsibility() {
         Roles & Responsibilities
       </h1>
       <BorderRayCircuit />
-        <div className="md:max-w-[1120px] sm:max-w-[1000px] max-w-[600px] w-full flex sm:flex-row md:flex-row flex-col justify-center items-center lg:p-0 p-3 mt-12 mb-12">
+        <div className="lg:max-w-[1120px] md:max-w-[1000px] max-w-[600px] w-full flex sm:flex-row md:flex-row flex-col justify-center items-center lg:p-0 p-3 mt-12 mb-12">
 
         <div
           className="flex flex-col gap-24"
@@ -73,14 +66,14 @@ function RolesAndResponsibility() {
               <div className="flex flex-col">
                 <div className="flex w-full relative">
                   <img src={card.icon} alt="" className="h-[65px] -left-4 absolute z-10 -top-12 " />
-                  <div className="absolute  -top-8 h-[45px] md:max-w-[350px] w-full   bg-[#244286] flex justify-center items-center border-[#f8E48E] border-2 rounded-tr-2xl ">
-                    <h3 className="md:text-lg text-lg xs:text-sm xs:text-center text-[#fff] font-semibold">
+                  <div className="absolute -top-8 h-[45px] md:max-w-[350px] w-full   bg-[#244286] flex justify-center items-center border-[#f8E48E] border-2 rounded-tr-2xl ">
+                    <h3 className="lg:text-lg text-lg md:text-sm md:text-center text-[#fff] font-semibold">
                       {card.title}
                     </h3>
                   </div>
                 </div>
                 <div className="bg-white p-[0px_20px_20px_20px] border-[#244286] border-2 rounded-2xl">
-                  <div className="max-w-[350px] h-[200px] lg:h-[200px] md:h-[200px] xs:h-[340px] w-full bg-[#244286] flex flex-col justify-center items-center gap-3 rounded-2xl p-3">
+                  <div className="max-w-[350px] h-[200px] lg:h-[200px]  md:h-[340px] w-full bg-[#244286] flex flex-col justify-center items-center gap-3 rounded-2xl p-3">
                     <p className="text-base text-left text-white font-normal">
                       {card.desc1}
                     </p>
@@ -118,13 +111,13 @@ function RolesAndResponsibility() {
                 <div className="flex w-full relative">
                   <img src={card.icon} alt="" className="h-[65px] -left-4 absolute z-10 -top-12 " />
                   <div className="absolute  -top-8 h-[45px] md:max-w-[334px] w-full  bg-[#244286] flex justify-center items-center border-[#f8E48E] border-2 rounded-tr-2xl ">
-                    <h3 className="md:text-lg text-lg xs:text-sm xs:text-center text-[#fff] font-semibold">
+                    <h3 className="lg:text-lg text-lg md:text-sm md:text-center text-[#fff] font-semibold">
                       {card.title}
                     </h3>
                   </div>
                 </div>
                 <div className="bg-white p-[0px_20px_20px_20px] border-[#244286] border-2 rounded-2xl">
-                  <div className="max-w-[350px] h-[200px] lg:h-[200px] md:h-[200px] xs:h-[340px] w-full bg-[#244286] flex flex-col justify-center items-center gap-3 rounded-2xl p-3">
+                  <div className="max-w-[350px] h-[200px] lg:h-[200px]  md:h-[340px] w-full bg-[#244286] flex flex-col justify-center items-center gap-3 rounded-2xl p-3">
                     <p className="text-base text-left text-white font-normal">
                       {card.desc1}
                     </p>
@@ -145,7 +138,7 @@ function RolesAndResponsibility() {
                 <div className="flex w-full relative">
                   <img src={roles5} alt="" className="h-[65px] -left-4 absolute z-10 -top-12 " />
                   <div className="absolute  -top-8 h-[45px] md:max-w-[400px] w-full  bg-[#244286] flex justify-center items-center border-[#f8E48E] border-2 rounded-tr-2xl ">
-                    <h3 className="md:text-lg text-lg xs:text-sm xs:text-center text-[#fff] font-semibold">
+                    <h3 className="lg:text-lg text-lg md:text-sm md:text-center text-[#fff] font-semibold">
                       Event or Meetup Host
                     </h3>
                   </div>
