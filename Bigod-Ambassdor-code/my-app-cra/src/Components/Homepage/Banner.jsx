@@ -22,7 +22,8 @@ function Banner() {
           to lead
         </p>
         </div>
-        <button className="bg-[#224187] text-white w-[350px] h-[70px] rounded-full text-2xl mb-4">Apply Now</button>
+          <a href="#application"> <button className="bg-[#224187] text-white w-[350px] h-[70px] rounded-full text-2xl mb-4">Apply Now</button></a>
+       
       </div>
     </div>
   );

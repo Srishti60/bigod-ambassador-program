@@ -22,7 +22,9 @@ function Home() {
       <TopLeaderboard/>
       <RolesAndResponsibility/>
       <Rewards />
+      <div id="application">
       <Application />
+      </div>
       <Note />
       <Footer />
     </div>

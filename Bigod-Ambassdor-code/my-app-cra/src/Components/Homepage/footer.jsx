@@ -60,7 +60,7 @@ const Footer = () => {
             <li><a href="https://investor.bingold.to/terms-and-conditions"  target="_blank" className="hover:text-white">Terms & Conditions</a></li>
                 <li className="cursor-pointer">
                   <a href ="https://bingold.to/withdraw-policy" target="_blank" >
-                  <p>Withdrawl Policy</p>
+                  <p>Withdrawal Policy</p>
                   </a>
                 </li>
           </ul>
@@ -87,11 +87,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-
       {/* Bottom Copyright */}
       <div className="mt-10 text-center text-sm text-gray-400">
        &copy; All rights reserved Bingold
-
       </div>
     </div>
     </div>
