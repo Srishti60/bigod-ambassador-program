@@ -71,7 +71,7 @@ function TopLeaderboard() {
             <img
               src={gif}
               alt="leaderboard gif"
-              className="h-[220px]  lg:h-[410px] hidden lg:block  relative top-[60px]"
+              className="h-[220px]  lg:h-[410px] hidden lg:block  relative top-[70px]"
             />
           </div>
 
