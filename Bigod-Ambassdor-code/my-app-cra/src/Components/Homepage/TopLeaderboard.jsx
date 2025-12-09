@@ -57,10 +57,10 @@ function TopLeaderboard() {
                 <img src={item.profile} alt="profile" className="md:h-[40px] h-[28px]" />
 
                 <div className="flex justify-center items-center gap-4 
-                  h-[50px] w-[240px] md:w-[320px] lg:w-[350px] rounded-xl border-2 border-white bg-[#224187]">
-                  <p className="text-white text-sm font-semibold">Leader</p>
-                  <img src={star} className="lg:h-[20px] h-[15px]" alt="star" />
-                  <p className="text-white text-sm font-semibold">1345</p>
+                  h-[50px] w-[250px] md:w-[320px] lg:w-[350px] rounded-xl border-2 border-white bg-[#224187]">
+                  <p className="text-white text-xs md:text-sm font-semibold">Leader</p>
+                  <img src={star} className="lg:h-[20px] h-[10px]" alt="star" />
+                  <p className="text-white text-xs md:text-sm font-semibold">1346</p>
                 </div>
               </div>
             ))}
@@ -71,7 +71,7 @@ function TopLeaderboard() {
             <img
               src={gif}
               alt="leaderboard gif"
-              className="h-[220px]  lg:h-[340px] hidden lg:block  relative top-[80px]"
+              className="h-[220px]  lg:h-[410px] hidden lg:block  relative top-[60px]"
             />
           </div>
 
