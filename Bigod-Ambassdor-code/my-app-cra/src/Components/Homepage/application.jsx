@@ -19,6 +19,7 @@ const Application = () => {
     connected: "",
     cvFile: null,
   });
+const [showThankYou, setShowThankYou] = useState(false);
 
   const [loading, setLoading] = useState(false);
 
@@ -34,35 +35,40 @@ const Application = () => {
   };
 
   // Submit Form API
-  const handleSubmit = async () => {
-    if (!form.fullName || !form.email) {
-      toast.error("Name & Email are required!");
-      return;
+const handleSubmit = async () => {
+  if (!form.fullName || !form.email) {
+    toast.error("Name & Email are required!");
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    const fd = new FormData();
+    for (let key in form) {
+      fd.append(key, form[key]);
     }
 
-    setLoading(true);
-
-    try {
-      const fd = new FormData();
-      for (let key in form) {
-        fd.append(key, form[key]);
-      }
-
-      const res = await axios.post(
-        "https://newapi.aiiongold.com/api/users/ambassador/request_send",
-        fd,
-        {
-         headers: {
-          "Content-Type": "multipart/form-data",
+    const res = await axios.post(
+      "https://newapi.aiiongold.com/api/users/ambassador/request_send",
+      fd,
+      {
+        headers: {
           "x-api-key": "a45i2i10-ong2-4o61-aiiongold-91l0-d2n17e2wd883",
         },
-        }
+      }
+    );
+
+    if (res.data?.status === true) {
+      toast.success(
+        res.data.message ||
+          "Your ambassador application has been received successfully!"
       );
 
-      toast.success(res.data.message || "your ambassador application has been received. We will review your application and get back to you soon.!");
-      setLoading(false);
+      // Open Thank You popup
+      setShowThankYou(true);
 
-      // Reset form after submit
+      // Reset form
       setForm({
         fullName: "",
         country: "",
@@ -74,14 +80,19 @@ const Application = () => {
         twitter: "",
         telegram: "",
         connected: "",
-        cv: null,
+        cvFile: null,
       });
-    } catch (err) {
-      console.log(err);
-      alert("Something went wrong! Try again.");
-      setLoading(false);
+    } else {
+      toast.error("Something went wrong. Please try again.");
     }
-  };
+  } catch (err) {
+    console.log(err);
+    toast.error("Something went wrong. Try again!");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="w-full bg-white">
@@ -269,6 +280,34 @@ const Application = () => {
           </button>
         </div>
       </div>
+      {showThankYou && (
+  <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+    <div className="bg-white rounded-2xl p-8 max-w-md w-full text-center relative">
+      <button
+        onClick={() => setShowThankYou(false)}
+        className="absolute top-3 right-3 text-gray-500 hover:text-black"
+      >
+        ✕
+      </button>
+
+      <h2 className="text-2xl font-bold text-[#26306D] mb-4">
+        Thank you for applying to the BIGOD Ambassador Program!
+      </h2>
+
+      <p className="text-gray-600">
+        We’ll review your application and email you soon with the next steps.
+      </p>
+
+      <button
+        onClick={() => setShowThankYou(false)}
+        className="mt-6 px-6 py-2 bg-[#244286] text-white rounded-lg hover:bg-blue-700 transition"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };

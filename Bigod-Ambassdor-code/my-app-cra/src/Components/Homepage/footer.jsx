@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF,  FaTwitter,FaInstagram ,FaTelegram} from "react-icons/fa";
+import { FaFacebookF,FaInstagram ,FaTelegram} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
 
